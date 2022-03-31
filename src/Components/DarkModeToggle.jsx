@@ -3,8 +3,10 @@ import { ColorSchemeContext } from '../Platform/ColorScheme';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 
+// This is the toggle button that updates the system theme through the ColorSchemeContext hook via useContext()
 export const DarkModeToggle: React.FC = () => {
   const { colorScheme, toggleColorScheme } = useContext(ColorSchemeContext);
+  // Style fixes the issues with the toggle icon being too low or high
   const style = {
     position: 'relative',
     top: '5px',
