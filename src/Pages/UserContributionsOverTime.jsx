@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GraphPage from './GraphPage';
-import CalendarGraph from '../Components/CalendarGraph';
+import { CalendarGraph } from '../Components/CalendarGraph';
 import { userSearch, userSearchCont } from '../Backend/searchingFunctionality';
 
 export const UserContributionsOverTimeSettings = {

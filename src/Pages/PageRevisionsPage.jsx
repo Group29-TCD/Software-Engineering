@@ -5,12 +5,9 @@ import PageFeed from '../Components/PageFeed';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as utils from '../Backend/searchingFunctionality';
 import CardDeck from 'react-bootstrap/CardDeck';
-import NumberOfChanges, { NumberOfChangesSettings } from './NumberOfChanges';
+import NumberOfChanges from './NumberOfChanges';
 import GraphCardSearch from '../Components/GraphCardSearch';
-import PageRevisionsOverTime, {
-  PageRevisionsOverTimeSettings,
-} from './PageRevisionsOverTime';
-import CalendarGraph from '../Components/CalendarGraph';
+import PageRevisionsOverTime from './PageRevisionsOverTime';
 
 class PageRevisionsPage extends Component {
   constructor(props) {
