@@ -31,14 +31,9 @@ function Feed() {
 
   return (
     <div>
-      <h3
-        className="text-blue text-left"
-        style={colorScheme === 'dark' ? { color: '#FFFFFF' } : {}}
-      >
-        Most Recent Activity
-      </h3>
-      <form className="text-left" onChange={togglePause}>
-        <label style={colorScheme === 'dark' ? { color: 'white' } : {}}>
+      <h3 className="text-blue text-left">Most Recent Activity</h3>
+      <form className="pause text-left" onChange={togglePause}>
+        <label>
           <input type="checkbox" /> Paused
         </label>
       </form>
