@@ -12,6 +12,7 @@ export function NavbarLocal(props) {
   const activePage = window.location.href;
   const { colorScheme, setColorScheme } = useContext(ColorSchemeContext);
   // handle class names if this is the active page for styling
+  let brandClassName = 'nav-link';
   let homeClassName = activePage.endsWith('/')
     ? 'nav-link--active'
     : 'nav-link';
@@ -41,6 +42,7 @@ export function NavbarLocal(props) {
 
   // Toggle dark mode
   if (colorScheme === 'dark') {
+    brandClassName += ' dark';
     homeClassName += ' dark';
     dashboardClassName += ' dark';
     feedClassName += ' dark';
@@ -54,7 +56,11 @@ export function NavbarLocal(props) {
     <div>
       <Navbar>
         <Navbar.Collapse>
-          <Navbar.Brand>WikiData Live</Navbar.Brand>
+          <Navbar.Brand>
+            <span style={colorScheme === 'dark' ? { color: '#ffffff' } : {}}>
+              WikiData Live
+            </span>
+          </Navbar.Brand>
           <Nav>
             <Nav.Link as={Link} to="/" className={homeClassName}>
               Home
