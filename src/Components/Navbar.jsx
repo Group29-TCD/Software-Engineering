@@ -54,6 +54,7 @@ export function NavbarLocal(props) {
     <div>
       <Navbar>
         <Navbar.Collapse>
+          <Navbar.Brand>WikiData Live</Navbar.Brand>
           <Nav>
             <Nav.Link as={Link} to="/" className={homeClassName}>
               Home

@@ -42,26 +42,33 @@ function Feed() {
           <input type="checkbox" /> Paused
         </label>
       </form>
-      <ul className="list-group">
-        {recentChanges.items.map((item, index) => (
-          <li
-            className="list-group-item text-left"
-            key={index}
-            style={colorScheme === 'dark' ? { color: '#ffffff' } : {}}
-          >
-            <div
-              className={
-                item.scores?.damaging?.score?.prediction ? 'text-red' : ''
-              }
-            >
-              {`User ${item.user} action ${item.type} on ${
-                item.title
-              } ${getTimeDifference(item.timestamp)} seconds ago`}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="row">
+        <div className="col-lg-3 col-12 infobox">
+          <h3> Recent Changes</h3>
+          <p>
+            This page shows the Recent changes made by user with timestampt.
+            Moreover, it shows the suspicious activities. The Suspicious
+            activities are mentioned with red text.
+          </p>
+        </div>
+        <div className="col-lg-9 col-12">
+          <ul className="list-group">
+            {recentChanges.items.map((item, index) => (
+              <li className="list-group-item text-left" key={index}>
+                <div
+                  className={
+                    item.scores?.damaging?.score?.prediction ? 'text-red' : ''
+                  }
+                >
+                  {`User ${item.user} action ${item.type} on ${
+                    item.title
+                  } ${getTimeDifference(item.timestamp)} seconds ago`}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
   );
 }
 
